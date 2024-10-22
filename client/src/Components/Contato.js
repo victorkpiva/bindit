@@ -1,6 +1,50 @@
 import styles from '../Css/Contato.module.css'
+import { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 function Contato(){
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+      });
+      const [emailSent, setEmailSent] = useState(false);
+      const [emailError, setEmailError] = useState('');
+    
+      const handleSubmit = (e) => {
+        e.preventDefault();
+    
+        emailjs
+            .sendForm(
+                process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+                e.target,
+                process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        ).then(
+            (result) => {
+                console.log('Email sent successfully:', result.text);
+                setEmailSent(true);
+                setEmailError('');
+        },
+        (error) => {
+          console.error('Error sending email:', error.text);
+          setEmailError('Erro ao enviar o email. Por favor, tente novamente.');
+        });
+    
+        // Limpar o formulário após o envio
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+      };
+    
+      const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+        setEmailSent(false); 
+      };
+
     return(
         <section className={styles.contactArea}>
             <div className={styles.contactText} id='section1'>
@@ -14,12 +58,12 @@ function Contato(){
 
             <div className={styles.formContato}>
                 <h2>Contato</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className={styles.infoUser}>
-                        <input type="text" name="name" className={styles.textBox} placeholder="Seu Nome" required />
-                        <input type="email" name="email" className={styles.textBox} placeholder="Seu Email" required />
+                    <input type="text" id="name" name="name" className={styles.textBox} placeholder='Seu Nome' value={formData.name} onChange={handleChange} required />
+                    <input type="email" id="email" name="email" className={styles.textBox} placeholder='Seu Email' value={formData.email} onChange={handleChange} required />
                     </div>
-                    <textarea name="mensagem" rows="5" placeholder="Sua Mensagem" required className={styles.textarea}/>
+                    <textarea id="message" name="message" className={styles.textarea} placeholder='Sua Mensagem' value={formData.message} onChange={handleChange} required />
                     <input type="submit" name="submit" className={styles.sendBtn} value="Enviar" />
                 </form>
             </div>

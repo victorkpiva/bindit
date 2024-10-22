@@ -7,6 +7,8 @@
     padding: 20px;
     transition: 0.5s;
     border: solid 3px black;
+    width: 30%;
+    margin: 10px;
   }
   
   .formContato:hover{
@@ -18,7 +20,7 @@
     justify-content: center;
     margin-top: 70px;
     font-family: "Pixelify Sans", sans-serif;
-    gap: 4px;
+    width: 100%;
   }
 
   .infoUser{
@@ -29,14 +31,18 @@
   }
 
   .contactText{
-    width: 50%;
+    width: 35%;
     padding: 10px;
     font-family: "Pixelify Sans", sans-serif;
     border: solid 3px black;
     background-color: #0e0b2b;
     border-radius: 15px;
     font-size: 20px;
-    margin-right: 20px;
+    margin: 10px;
+
+    h2{
+      margin-top: 50px;
+    }
    }
 
    form {
@@ -44,7 +50,7 @@
     box-sizing: border-box; 
   }
 
-  textarea .textBox .sendBtn{
+   .textBox{
     width: 100%;
     box-sizing: border-box;
   }
@@ -56,7 +62,10 @@
     border: solid 1px white;
     margin-bottom: 10px;
     resize: none;
-    width: 98%;
+    width: 100%; /* Faz o textarea ocupar toda a largura do formulário */
+    height: 150px; /* Define uma altura adequada */
+    padding: 10px; /* Adiciona espaçamento interno */
+    box-sizing: border-box; /* Garante que padding seja considerado na largura total */
   }
 
   .sendBtn {
