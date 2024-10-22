@@ -1,0 +1,92 @@
+/* Login.module.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+.body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(45deg, rgb(20, 20, 20), #1f165f);
+    max-width: 100vw;
+    max-height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 100vh;
+}
+
+.logoContainer {
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 100%;
+    height: 120px;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box; /* Certificar que padding e border sejam incluídos na largura total */
+}
+
+.formGroup {
+    margin-bottom: 30px;
+}
+
+label {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+input, .loginBtn { /* Aplicar estilo tanto aos inputs quanto ao botão */
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Garantir que padding e border sejam incluídos na largura total */
+}
+
+.loginBtn {
+    padding: 15px; /* Para ajustar o padding do botão */
+    font-size: 18px;
+    color: white;
+    background-color: #0e0b2b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    transition: background-color 0.3s;
+}
+
+.loginBtn:hover {
+    background-color: #1c1b4b;
+}
+
+.forgotPassword {
+    margin-top: 20px;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.forgotPassword a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.forgotPassword a:hover {
+    text-decoration: underline;
+}

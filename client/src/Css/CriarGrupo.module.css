@@ -1,0 +1,59 @@
+/* CreateGroup.module.css */
+.createGroupContainer {
+    background: #1f165f;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    margin: 0 auto;
+    color: #fff;
+  }
+  
+  h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+
+    textarea{
+      width: 95%;
+    }
+  }
+  
+  label {
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+ 
+  .submitBtn {
+    padding: 10px 20px;
+    background-color: #0e0b2b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submitBtn:hover {
+    background-color: #1c1b4b;
+  }
+  

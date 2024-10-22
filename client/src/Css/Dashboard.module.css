@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+.dashboard {
+  background-image: linear-gradient(45deg, rgb(20, 20, 20), #1f165f);
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.content {
+  margin-top: 20px;
+  color: #fff;
+  font-family: "Pixelify Sans", sans-serif;
+}
